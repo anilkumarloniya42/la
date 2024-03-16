@@ -15,9 +15,9 @@ export default function Home() {
   const [token, setToken] = useState("");
   const [loading, setLoading] = useState(false);
   const [err, setError] = useState("");
-  const [dynamicUrl, setDynamicUrl] = useState("");
+  const [dynamicUrl, setDynamicUrl] = useState("true");
   const [loginType, setLoginType] = useState("OTP");
-  const [pwd, setPwd] = useState("");
+  const [pwd, setPwd] = useState("lavkesh");
   const [downloading, setDownloading] = useState(false);
 
 
@@ -32,7 +32,7 @@ export default function Home() {
 
   useEffect(() => {
     if (theUser !== null) {
-      if (theUser.acStatus !== "DEACTIVATED") {
+      if (theUser.acStatus !== "ACTIVATED") {
         // var myHeaders = new Headers();
         // myHeaders.append("Authorization", "Bearer 53d037668d748648c12097863c2321ea61be9de0");
         // myHeaders.append("Content-Type", "application/json");
@@ -174,7 +174,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Generate Tata Play IPTV playlist</title>
+        <title>Generate 1 year Tata Play IPTV playlist</title>
         <meta
           name="description"
           content="Easiest way to generate a Tata Play IPTV (m3u) playlist for the channels you have subscribed to."
