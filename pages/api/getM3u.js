@@ -8,7 +8,7 @@ export default async function handler(req, res) {
         sName: req.query.sname,
         token: req.query.tkn,
         ent: req.query.ent.split('_'),
-        tsDeactive: req.query.sid.split('_')[1] === "A" ? false : true
+        tsDeactive: req.query.sid.split('_')[1] === "D" ? false : true
     };
     if (uData.tsDeactive) {
         let m3uString = await generateM3u(uData);
