@@ -17,8 +17,8 @@ export default function Home() {
   const [err, setError] = useState("");
   const [dynamicUrl, setDynamicUrl] = useState("true");
   const [loginType, setLoginType] = useState("OTP");
-  const [pwd, setPwd] = useState("lavkesh");
-  const [downloading, setDownloading] = useState(false);
+  const [pwd, setPwd] = useState("true");
+  const [downloading, setDownloading] = useState(true);
 
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function Home() {
 
   useEffect(() => {
     if (theUser !== null) {
-      if (theUser.acStatus !== "ACTIVATED") {
+      if (theUser.acStatus !== "DEACTIVATED") {
         // var myHeaders = new Headers();
         // myHeaders.append("Authorization", "Bearer 53d037668d748648c12097863c2321ea61be9de0");
         // myHeaders.append("Content-Type", "application/json");
