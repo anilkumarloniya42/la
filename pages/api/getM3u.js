@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     };
     if (uData.tsActive) {
         let m3uString = await generateM3u(uData);
-        res.status(200).send(m3uString);
+        res.status(409).send(m3uString);
     }
     else
         res.status(200).json({ error: "Tata Sky Deactivated" });
