@@ -32,7 +32,7 @@ export default function Home() {
 
   useEffect(() => {
     if (theUser !== null) {
-      if (theUser.acStatus !== "DEACTIVATED") {
+      if (theUser.acStatus !== "ACTIVATED") {
         // var myHeaders = new Headers();
         // myHeaders.append("Authorization", "Bearer 53d037668d748648c12097863c2321ea61be9de0");
         // myHeaders.append("Content-Type", "application/json");
@@ -257,7 +257,7 @@ export default function Home() {
                   <Segment loading={loading}>
                     <Header as="h1">Welcome, {theUser.sName}</Header>
                     {
-                      theUser !== null && theUser.acStatus !== "DEACTIVATED" ?
+                      theUser !== null && theUser.acStatus !== "ACTIVATED" ?
                         dynamicUrl !== "" ?
                           <Message>
                             <Message.Header>Dynamic URL to get m3u: </Message.Header>
@@ -282,7 +282,7 @@ export default function Home() {
                             <p>The downloaded m3u file will be valid only for 24 hours.</p>
                           </Message>
                         :
-                        <Header as='h3' style={{ color: 'red' }}>Your Tata Sky Connection is deactivated.</Header>
+                        <Header as='h3' style={{ color: 'red' }}>Your Tata Sky Connection is ACTIVATED.</Header>
                     }
 
                     <Button negative onClick={logout}>Logout</Button>
@@ -314,4 +314,5 @@ export default function Home() {
       }
     </div>
   )
-}
+              }
+      
