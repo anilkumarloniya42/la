@@ -3,7 +3,7 @@
 export default async function handler(req, res) {
     let uData = {
         uAgent: req.headers['user-agent'],
-        sid: req.query.sid.split('_')[0],
+        sid: req.query.sid.split('_')[1],
         id: req.query.id,
         sName: req.query.sname,
         token: req.query.tkn,
