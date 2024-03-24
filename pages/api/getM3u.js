@@ -3,14 +3,14 @@
 export default async function handler(req, res) {
     let uData = {
         uAgent: req.headers['user-agent'],
-        sid: req.query.sid.split('_')[1],
+        sid: req.query.sid.split('_')[0],
         id: req.query.id,
         sName: req.query.sname,
         token: req.query.tkn,
         ent: req.query.ent.split('_'),
-        tsActive: req.query.sid.split('_')[0] === "D" ? false : true
+        tsActive: req.query.sid.split('_')[1] === "D" ? false : true
     };
-    if (uData.tsActive) {
+    if (uData.token) {
         let m3uString = await generateM3u(uData);
         res.status(200).send(m3uString);
     }
