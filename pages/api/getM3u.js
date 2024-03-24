@@ -213,5 +213,5 @@ const generateM3u = async (ud) => {
             m3uStr = userChanDetails.err.toString();
         return m3uStr;
     }
-              }
-        
+        }
+    
